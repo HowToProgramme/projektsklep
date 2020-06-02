@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sklep</title>
+	<link rel="stylesheet" href="main.css">
+	<meta charset="utf-8">
+	<meta name="author" content="Konrad Waliszewski">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		var lp=1;
+	function dodaj(){
+				lp++;
+		var nazwafunckcji = document.getElementById("nazwad");
+		var iloscfunckcji = document.getElementById("iloscd");
+		var cenafunckcji = document.getElementById("cenad");
+		var autorfunckcji = document.getElementById("autord");
+
+		row=document.createElement("tr");
+		row.innerHTML="<td>"+lp+"</td> <td>"+nazwafunckcji.value+"</td> <td>"+iloscfunckcji.value+"</td> <td>"+cenafunckcji.value+"</td> <td>"+autorfunckcji.value+"</td><td><button id='usun' onclick='deleteRow(this)'>Usuń produkt</button></td>";
+		var dodaj=document.getElementById("zakupy");
+		dodaj.appendChild(row);
+	}
+
+
+	function deleteRow(a){
+		var b=a.parentNode.parentNode.rowIndex;
+		document.getElementById("zakupy").deleteRow(b);
+
+	}
+
+	function zmien(){
+		var wybor= document.getElementById("numerz");
+		var nn = document.getElementById("nazwaz");
+		var ni = document.getElementById("iloscz");
+		var nc = document.getElementById("cenaz");
+		var nz = document.getElementById("autorz");
+
+		for(a=1;a<=lp;a++){
+			var wybrana=document.getElementsByTagName("tr")[a];
+			if(parseInt(wybrana.firstElementChild.innerHTML)==parseInt(wybor.value))
+			{
+				wybrana.innerHTML="<tr><td>"+wybrana.firstElementChild.innerHTML+"</td><td>"+nn.value+"</td><td>"+ni.value+"</td><td>"+nc.value+"</td><td>"+nz.value+"</td><td><button id='usun' onclick='deleteRow(this)'>Usuń produkt</button></td></tr>";
+			}
+		}
+	}
+
+	</script>
+
+
+  <h2>Nazwa Sklepu, kreatywna</h2>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Główna Strona</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Sklep</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Kontakt</a>
+    </li>
+  </ul>
+  			<div class="container">
+  				<div class="row">
+  		<div class="col-sm-8">
+	
+	<h2>Sklep</h2>
+	<form>
+	<input type="button" value="dodaj" onclick="dodaj();" /> 
+			<input type="text" id="nazwad" placeholder="nazwa"/>
+            <input type="text" id="iloscd" placeholder="ilość"/>
+            <input type="text" id="cenad" placeholder="cena"/>
+            <input type="text" id="autord" placeholder="zamawiający"/><br>
+	<input type="button" value="zmien" onclick="zmien();" /> 
+			<input type="text" id="numerz" placeholder="numer"/>
+			<input type="text" id="nazwaz" placeholder="nazwa"/>
+            <input type="text" id="iloscz" placeholder="ilość"/>
+            <input type="text" id="cenaz" placeholder="cena"/>
+            <input type="text" id="autorz" placeholder="zamawiający"/><br>
+	</form>
+
+	<table id="zakupy">
+		<tr>
+		<th>Liczba porządkowa</th>
+		<th>Nazwa produktu</th>
+		<th>Cena produktu</th>
+		<th>Ilość produktu</th>
+		<th>Nazwisko zamawiającego</th>
+		<th>Usuń</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>mleko</td>
+			<td class="kasa">13zł</td>
+			<td>100</td>
+			<td>kowalski</td>
+			<td><button id="usun" onclick="deleteRow(this)">Usuń produkt</button></td>
+		</tr>
+		<td colspan="1"><p><i class="left"></i></p></td>
+		<td colspan="4">1/1</td>
+		<td colspan="1"><p><i class="right"></i></p></td>
+		<tr>
+
+		</tr>
+	</table>
+
+		<p>Produkty</p>
+		<div class="produkty">
+		
+		<figure><img class="zdjecie"src="mleko.bmp"></figure>
+		<figure><img class="zdjecie"src="chlep.bmp"></figure>
+
+	</div>
+
+	</div>
+
+	<div class="col-sm-4">
+		<p>Reklamy</p>
+		<figure><img src="reklama.bmp"></figure>
+		<figure><img src="reklama2.bmp"></figure>
+
+	</div>
+
+
+	</div>
+	<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Karol Warzecha 2020</p>
+  </footer>
+</div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

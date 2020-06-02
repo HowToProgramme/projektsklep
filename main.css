@@ -1,0 +1,205 @@
+body*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    margin: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #9e9e9e;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+td{
+	 text-align: center;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+main{
+  padding-top: 30px;
+}
+
+
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.produkty{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "zdjecie zdjecie";
+}
+
+.zdjecie{
+  grid-area: zdjecie;
+}
+
+section{
+  padding: 25px;
+  font-size: 20px;
+}
+
+.popu{
+  color: #b71;
+}
+
+.popularne{
+  border: 1px solid #0000;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  height: 500px;
+  float: left;
+}
+
+.cena{
+  text-align: center;
+  font-size: 25px;
+}
+
+.gkategoria{
+  color: #a49875;
+  text-align: center;
+}
+.kategoria{
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 37px;
+  width: 150px;
+  height: 150px;
+  float:  left;
+  text-align: center;
+}
+
+.stronakategorie{
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+
+.gkategoria2{
+color: #b71f1f;
+font-size: 30px;
+margin: 40px;
+text-align: center;
+width: 100%;
+}
+
+.kategoria2{
+border: 1px solid #000;
+border-radius: 7px;
+width: 30%;
+height: 250px;
+margin-top: 100px;
+margin-bottom: 100px;
+text-align: center;
+box-shadow: 5px 6px 2px #b2b2b2;
+}
+
+.napis2{
+color: #fff;
+text-shadow: 3px 1px 1px #000;
+font-size: 30px;
+}
+
+.napis{
+  color: #fff;
+  text-shadow:3px 1px 1px #000;
+}
+
+
+.kliknij{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  color: #490576;
+  width: 75px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #c567;
+  color: #000;
+  float: left;
+  padding: 5px;
+}
+
+.przyciski{
+  width: 75px;
+  border: 2px solid #596786;
+  color: #000;
+  border-radius: 5px;
+}
+
+.tabelakoszyk{
+  margin-top: -30px;
+}
+
+.przyciskdostawy{
+width: 300px;
+font-size: 15px;
+  border: 2px solid #596786;
+  color: #000;
+  border-radius: 5px;
+}
+
+footer{
+    margin: auto;
+    clear: both;
+    background-color: #b7b7b7;
+    height: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+#p{
+background-image: url(pszenica.bmp);
+}
+
+#d{
+background-image: url(mleko2.bmp);
+}
+
+h3{
+  padding: 30px;
+  margin-top: 30px;
+  color: red;
+
+}
+
+.container{
+  padding: 20px;
+}
+
+.dane{
+  font-size: 25px;
+}
